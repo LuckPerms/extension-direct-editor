@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+}
+
+group 'me.lucko.luckperms'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compileOnly 'net.luckperms:api:5.0'
+    compileOnly 'me.lucko.luckperms:common:5.1-SNAPSHOT'
+}
