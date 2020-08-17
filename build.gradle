@@ -1,4 +1,5 @@
 plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
     id 'java'
     id 'eclipse'
 }
@@ -20,4 +21,14 @@ repositories {
 dependencies {
     compileOnly 'net.luckperms:api:5.0'
     compileOnly 'me.lucko.luckperms:common:5.1-SNAPSHOT'
+    
+    compile 'org.rapidoid:rapidoid-http-server:5.5.5'
+}
+
+shadowJar {
+    classifier = null
+}
+
+artifacts {
+    archives shadowJar
 }
